@@ -12,9 +12,16 @@ export default function Number(props) {
     }
   }, [props.count]);
   const seat = (e) => {
-    props.stayed((prev) => prev - 1);
-    e.target.classList.remove("btn-primary");
-    setClick(true);
+    if (!click) {
+      props.stayed((prev) => prev - 1);
+      e.target.classList.remove("btn-primary");
+      setClick(true);
+    }
+    else{
+      props.stayed((prev) => prev + 1);
+      e.target.classList.add("btn-primary");
+      setClick(false);
+    }
   };
   return (
     <Button className="m-2" onClick={seat} variant="primary">
