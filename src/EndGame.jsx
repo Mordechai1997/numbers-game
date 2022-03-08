@@ -3,7 +3,7 @@
 export default function EndGame(props) {
  
     return (
-      <h1 className='mb-3'>{props.counter}</h1>
+      <h1 className='mb-3'>{props.counter} Attempts</h1>
     );
   }
   
