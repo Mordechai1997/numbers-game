@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 
 export default function Number(props) {
+  
   const [num, setNum] = useState(Math.floor(Math.random() * 10));
   const [click, setClick] = useState(false);
 
